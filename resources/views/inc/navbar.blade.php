@@ -10,6 +10,7 @@
                 <a href="/mylara/public">Home</a>
                 <a href="/mylara/public/about">About</a>
                 <a href="/mylara/public/services">Services</a>
+                <a href="/mylara/public/posts">Blog</a>
             </li>
           </ul>
         </div>

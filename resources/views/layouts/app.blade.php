@@ -10,6 +10,11 @@
     <body>
         @include('inc.navbar')
         <div class="container">
+            <hr>
+            <hr>
+            <hr>
+            <hr>
+        
     @yield('content')<!--this content will be changed
         || and the rest stays as long as layouts.app called -->
         </div>

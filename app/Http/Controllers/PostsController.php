@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Post;
 use DB;
 
@@ -28,7 +29,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -39,7 +40,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $validatedData = $request->validate([
+            'title' => 'required|unique:posts|max:255',
+            'body' => 'required',
+        ]);
+
+        return view('posts');
     }
 
     /**

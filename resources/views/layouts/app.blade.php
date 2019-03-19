@@ -24,8 +24,8 @@
         || and the rest stays as long as layouts.app called -->
         </div>
         <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-        <script>
-            CKEDITOR.replace( 'article-ckeditor' );
+        <script type="text/javascript">
+            CKEDITOR.replace( 'editor1' );
         </script>
     </body>
 </html>

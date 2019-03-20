@@ -4,7 +4,6 @@
         ||will be inserted-->
         <h1>{{$title}}</h1><!--$title take place in PagesController
         ||it is good for an often used content-->
-        <p>This is the first web application from Adam Gyarmati</p>
         <div class="jumbotron text center">
             <h1>Welcome here!</h1>
             <p>This is the first web application from Adam Gyarmati</p>

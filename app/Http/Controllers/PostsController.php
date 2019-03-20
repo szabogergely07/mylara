@@ -9,6 +9,17 @@ use DB;
 
 class PostsController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *that blocks visitors to edit or create a post without logging in
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);//added an exception wit an array
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -77,7 +88,15 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
+
         $post = Post::find($id);
+
+        //Check for correct user
+        //if it is not equal to user id, than redirect to post, with an error message
+        if(auth()->user()->id !==$post->user_id){
+            return redirect('/mylara/public/posts')->with('error', 'Unauthorized page');
+        }
+
         return view('posts.edit')->with('post', $post);
     }
 
@@ -115,6 +134,10 @@ class PostsController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+            //prevent for users to delete other users posts
+        if(auth()->user()->id !==$post->user_id){
+            return redirect('/mylara/public/posts')->with('error', 'Unauthorized page');
+        }
         $post->delete();
         return redirect('/posts')->with('success', 'Post Removed');
 

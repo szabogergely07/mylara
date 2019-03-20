@@ -6,8 +6,8 @@
         @foreach ($posts as $post)
             <div class="well">
             <h3><a href="/mylara/public/posts/{{$post->id}}">{{$post->title}}</a></h3>
-            <small>Written on {{$post->created_at}}</small>
-            </div>
+            <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
+            </div><!--add time and ->name from user, under the post-->
         @endforeach
         {{$posts->links()}}
     @else

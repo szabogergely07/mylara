@@ -3,6 +3,9 @@
 @section('content')
 <a href="/mylara/public/posts/" class="btn btn-default">Go Back</a>
 <h1>{{$post->title}}</h1>
+<img style="width:100%" src="/mylara/public/storage/cover_images/{{$post->cover_image}}" alt="">
+<br>
+<br>
 <div>
     {{$post->body}}
 </div>

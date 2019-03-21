@@ -7,7 +7,7 @@
         <div class="jumbotron text center">
             <h1>Welcome here!</h1>
             <p>This is the first web application from Adam Gyarmati</p>
-            <p><a class="btn btn-primary btn lg" href="mylara/public/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/mylara/public/register" role="button">Register</a></p>
+            <p><a class="btn btn-primary btn lg" href="/mylara/public/login" role="button">Login</a> <a class="btn btn-success btn-lg" href="/mylara/public/register" role="button">Register</a></p>
         </div>
     
     

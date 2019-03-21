@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;//find in laravel documentation
 use App\Post;
 use DB;
 
@@ -55,15 +56,34 @@ class PostsController extends Controller
 
         $this->validate($request, [
             'title' => 'required',
-            'body' => 'required'
+            'body' => 'required',
+            'cover_image' => 'image|nullable|max:1999' //the file has to be an image|validated after upload|less than 2 MB(because often thats Apache server limitation)
         ]);
+
+        //Handle File Upload...checks if the user clicked on button and selected file to upload
+        if($request->hasFile('cover_image')){
+            //Get filename with the extension...will put the actual file name what was uploaded
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            //Get just filename...it gets only the filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //Get just extension...like jpg or img or pic...
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            //Filename to Store ...it stores name and time and an extension(to make file unique)
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            //Upload Image...create a folder and saves file there(run ->artisan storage:link)
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+        }
+        else{
+            $fileNameToStore = 'noimage.jpg';//if user do not upload image, uses that default to display
+        }
 
         //create Post
         $post = new Post;
         $post->title = $request->input('title');
         $post->body = $request->input('body');
-        $post->user_id = auth()->user()->id;//authenticate the access to user_id
-        $post->save();                         //||get currently logged in user and put it into user_id
+        $post->user_id = auth()->user()->id;//authenticate the access to user_id//||get currently logged in user and put it into user_id
+        $post->cover_image = $fileNameToStore;//either posts image or noimage.jpg
+        $post->save();                         
 
         return redirect('/posts')->with('success', 'Post Created');
     }
@@ -115,10 +135,28 @@ class PostsController extends Controller
             'body' => 'required'
         ]);
 
+         //Handle File Upload
+         if($request->hasFile('cover_image')){
+            //Get filename with the extension
+            $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
+            //Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            //Get just extension
+            $extension = $request->file('cover_image')->getClientOriginalExtension();
+            //Filename to Store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+            //Upload Image
+            $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+        }
+
         //create Post
         $post = Post::find($id);//does not create a new post, but find the edited
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        if($request->hasFile('cover_image')){
+            $post->cover_image = $fileNameToStore;// let change the image
+        }
+
         $post->save();
 
         return redirect('/posts')->with('success', 'Post Updated');
@@ -138,6 +176,12 @@ class PostsController extends Controller
         if(auth()->user()->id !==$post->user_id){
             return redirect('/mylara/public/posts')->with('error', 'Unauthorized page');
         }
+            //if the cover img not equal to noimage, than delet image
+        if($post->cover_image != 'noimage.jpg'){
+            //Delete image
+            Storage::delete('public/cover_images/'.$post->cover_image);
+        }
+
         $post->delete();
         return redirect('/posts')->with('success', 'Post Removed');
 

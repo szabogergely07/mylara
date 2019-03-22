@@ -1,59 +1,69 @@
-      <nav class="navbar navbar-expand-md navbar-laravel">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Side Of Navbar -->
-                <ul class="navbar-nav mr-auto">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="/mylara/public">Home</a>
-                        <a href="/mylara/public/about">About</a>
-                        <a href="/mylara/public/services">Services</a>
-                        <a href="/mylara/public/posts">Blog</a>
-                        <a href="/mylara/public/posts/create">Create Post</a>
-                    </li>
-                  </ul>
-                </ul>
+        <a class="navbar-brand" href="{{ url('/') }}">
+            {{ config('app.name', 'Laravel') }}
+        </a>
 
-                <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
-                    <!-- Authentication Links -->
-                    @guest
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+<!-- Left Side Of Navbar -->
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/mylara/public/about">About me <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/mylara/public/services">Services <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/mylara/public/posts">Blog <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/mylara/public/posts/create">Write Post <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+
+<!-- Right Side Of Navbar -->
+        <ul class="navbar-nav ml-auto">
+<!-- Authentication Links -->
+            @guest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
-                        @if (Route::has('register'))
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-                            <li><a href="/mylara/public/home">Dashboard</a></li>
-
-                            <div class="" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
+                @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                         </li>
-                    @endguest
-                </ul>
-            </div>
-        </div>
-    </nav>
+                @endif
+                @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                {{ Auth::user()->name }}
+                            </a>
+                        <li class="nav-link">
+                            <a title="Edit" class="btn btn-outline-light" href="/mylara/public/home">&#x270E;
+                            </a>
+                        </li>
+
+                        <li class="nav-link">
+                            <a title="Logout" class="btn btn-outline-light" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">&#x2613;
+                            </a>
+                        </li>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
+            @endguest
+        </ul>
+
+<!-- search engine displayed here -->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+    </div>
+</nav>

@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<div class="col-md-12 mb-xl-5">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
 
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -42,12 +43,12 @@
                                 {{ Auth::user()->name }}
                             </a>
                         <li class="nav-link">
-                            <a title="Edit" class="btn btn-outline-light" href="/mylara/public/home">&#x270E;
+                            <a title="Edit" class="btn btn-sm btn-outline-light" href="/mylara/public/home">&#x270E;
                             </a>
                         </li>
 
                         <li class="nav-link">
-                            <a title="Logout" class="btn btn-outline-light" href="{{ route('logout') }}"
+                            <a title="Logout" class="btn btn-sm btn-outline-light" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">&#x2613;
                             </a>
@@ -67,3 +68,4 @@
             </form>
     </div>
 </nav>
+</div>

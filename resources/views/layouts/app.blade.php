@@ -22,7 +22,7 @@
 <body>
     <div id="app">
         @include('inc.navbar')
-        <div class="container">
+        <div class="container py-5">
         @include('inc.messages')
         <!--messages will be included to all pages-->
         @yield('content')<!--this content will be changed

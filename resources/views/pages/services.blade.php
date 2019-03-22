@@ -9,7 +9,7 @@
         <ul class="list-group">
             @foreach ($services as $service)<!--loop trough-->
                 <li class="list-group-item">{{$service}}</li>
-             @endforeach
+            @endforeach
         </ul>
     @endif
     @endsection

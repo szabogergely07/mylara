@@ -15,7 +15,7 @@
                 <a class="nav-link" href="/mylara/public/about">About me <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/mylara/public/services">Services <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/mylara/public/myprojects">My Projects <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/mylara/public/posts">Blog <span class="sr-only">(current)</span></a>

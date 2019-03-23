@@ -15,7 +15,7 @@
                     @endif
                             <a href="/mylara/public/posts/create" class="btn btn-primary">Create Post</a>
                             <h3>Your Blog Post</h3>
-                        @if (count($posts) > 0)
+                    @if (count($posts) > 0)
                             <table class="table table-striped">
                                     <tr>
                                         <th>Title</th>
@@ -36,7 +36,7 @@
                                 @endforeach
                             </table>
                         @else
-                        <p>You have no posts</p>
+                            <p>You have no posts</p>
                         @endif
                 </div>
             </div>

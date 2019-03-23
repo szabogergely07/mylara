@@ -7,16 +7,14 @@
             <div class="well">
                 <div class="row">
                     <div class="col-md-4 col-sm-4"><!--displays uploaded images...or noimage.jpg-->
-                    <img style="width:100%" src="/mylara/public/storage/cover_images/{{$post->cover_image}}" alt="">
+                        <img style="width:100%" src="/mylara/public/storage/cover_images/{{$post->cover_image}}" alt="">
                     </div>
                     <div class="col-md-8 col-sm-8">
                         <h3><a href="/mylara/public/posts/{{$post->id}}">{{$post->title}}</a></h3>
                         <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
-
-                    </div>
-
+                    </div><!--add time and ->name from user, under the post-->
                 </div>
-            </div><!--add time and ->name from user, under the post-->
+            </div>
         @endforeach
         {{$posts->links()}}
     @else

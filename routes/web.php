@@ -25,4 +25,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/myprojects', 'PagesController@myprojects');
 
-Route::get('/results', 'PagesController@search_engine');
+Route::get('/results', 'SearchController@search_engine');

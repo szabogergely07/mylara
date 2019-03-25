@@ -24,3 +24,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/myprojects', 'PagesController@myprojects');
+
+Route::get('/results', 'PagesController@search_engine');

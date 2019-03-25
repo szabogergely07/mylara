@@ -61,11 +61,19 @@
             @endguest
         </ul>
 
-<!-- search engine displayed here -->
-            <form class="form-inline my-2 my-lg-0">
+<!-- search engine displayed here-->
+            <!--<form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
+
+
+            {!! Form::open(['method'=>'GET','url'=>'search','class'=>'navbar-form navbar-left','role'=>'search'])  !!}
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" name="search" placeholder="Search...">
+                    <a href="{{ url('results') }}" class="btn btn-sm"><span class="glyphicon glyphicon-plus"></span>OK</a>
+                </div>
+            {!! Form::close() !!}
     </div>
 </nav>
 </div>

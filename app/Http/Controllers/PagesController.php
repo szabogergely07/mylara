@@ -26,4 +26,8 @@ class PagesController extends Controller
     public function myprojects(){
         return view('pages.myprojects');
     }
+
+    public function search_engine(){
+        return view('search.results');
+    }
 }

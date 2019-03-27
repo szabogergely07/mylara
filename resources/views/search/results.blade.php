@@ -34,7 +34,7 @@
                             //display the results in string from the 1st till 100 catarcter
                         echo substr($results, 0, 100)  . "....";
                     }
-                            //if there is a match
+                            //if there are a matches
                     else{
                             //find (canse insensitive)string in a string
                         $results = stristr($aboutcontent, $_GET["name"]);

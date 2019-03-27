@@ -17,10 +17,9 @@
                         $aboutcontent = file_get_contents('C:\xampp\htdocs\mylara\resources\views\pages\about.blade.php', true);
                             //search all matches for pattern in lowercase
                         $match = preg_match_all('/\b'. strtolower($input) .'\b/', strtolower($aboutcontent));
-                            //find (canse insensitive)string in a string
-                        $results = stristr($aboutcontent, $_GET["name"]);
+
                             //if the input field is empty
-                    if (empty($_GET["name"])) {
+                    if (empty($input)) {
                         echo "Please search for something";
                     }
                             //if there is no match 
@@ -29,12 +28,16 @@
                     }
                              //if there is a match
                     elseif($match == 1){
+                            //find (canse insensitive)string in a string
+                        $results = stristr($aboutcontent, $_GET["name"]);
                         echo "For the word: " .mb_strtoupper($input). " you have $match match" . "<br>";
                             //display the results in string from the 1st till 100 catarcter
                         echo substr($results, 0, 100)  . "....";
                     }
                             //if there is a match
                     else{
+                            //find (canse insensitive)string in a string
+                        $results = stristr($aboutcontent, $_GET["name"]);
                         echo "For the word: " .mb_strtoupper($input). " you have $match matches" . "<br>";
                             //display the results in string from the 1st till 100 catarcter
                         echo substr($results, 0, 100)  . "....";

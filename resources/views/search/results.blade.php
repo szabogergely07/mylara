@@ -18,6 +18,7 @@
                             //search all matches for pattern in lowercase
                         $match = preg_match_all('/\b'. strtolower($input) .'\b/', strtolower($aboutcontent));
 
+
                             //if the input field is empty
                     if (empty($input)) {
                         echo "Please search for something";
@@ -30,17 +31,21 @@
                     elseif($match == 1){
                             //find (canse insensitive)string in a string
                         $results = stristr($aboutcontent, $_GET["name"]);
+                            //escapes special caracters(do not display them)
+                        $result = preg_replace("/[^a-zA-Z0-9\s]/", "", $results);
                         echo "For the word: " .mb_strtoupper($input). " you have $match match" . "<br>";
                             //display the results in string from the 1st till 100 catarcter
-                        echo substr($results, 0, 100)  . "....";
+                        echo substr($result, 0, 100)  . "....";
                     }
                             //if there are a matches
                     else{
                             //find (canse insensitive)string in a string
                         $results = stristr($aboutcontent, $_GET["name"]);
+                            //escapes special caracters(do not display them)
+                        $result = preg_replace("/[^a-zA-Z0-9\s]/", "", $results);
                         echo "For the word: " .mb_strtoupper($input). " you have $match matches" . "<br>";
                             //display the results in string from the 1st till 100 catarcter
-                        echo substr($results, 0, 100)  . "....";
+                        print substr($result, 0, 100)  . "....";
                     }
                 @endphp
             </div>

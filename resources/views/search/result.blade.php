@@ -16,6 +16,8 @@
                     <td> {{ $user->email }} </td>
                 </tr>
             @endforeach
+            @elseif(isset( $message ))
+                <p> {{ $message }} </p>
         </tbody>
     </table>
 @endif

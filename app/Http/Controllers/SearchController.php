@@ -17,12 +17,11 @@ class SearchController extends Controller
                             ->orWhere('email', 'LIKE', '%' . $search_input . '%')
                             ->get();
             if(empty($search_input)){
-                echo "empty";
-                //return view('search.result')->withMessage("empty");
+                return view('search.result')->withMessage("Please type something into SEARCH-field");
             }
 
             elseif(count($user) < 1){
-                return view('search.result')->withMessage("No user found");
+                return view('search.result')->withMessage("No such a USER in our database");
             }
 
             else{

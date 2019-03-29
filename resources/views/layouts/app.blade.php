@@ -22,17 +22,19 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-social.css') }}" rel="stylesheet">
+        
+
     </head>
+    <header>
+        @yield('headsection')
+        @include('inc.navbar')
+    </header>
     <body>
-        <div id="app">
-            @include('inc.navbar')
-            <div class="container py-5">
-            @include('inc.messages')
-            <!--messages will be included to all pages-->
-            @yield('content')<!--this content will be changed
-            || and the rest stays as long as layouts.app called -->
-            </div>
-        </div>
+
+        @include('inc.messages')
+        @yield('content')
+        @yield('bodysection')
+
         <script type="text/javascript">
             CKEDITOR.replace( 'editor1' );
         </script>

@@ -1,3 +1,4 @@
+<header>
 <div class="col-md-12 mb-xl-5">
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
 
@@ -66,3 +67,4 @@
          </div>
 </nav>
 </div>
+</header>

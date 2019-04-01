@@ -6,15 +6,14 @@
             <div class="col-md-2">
             </div>
         
-            <div class="col-md-7 jumbotron text center">
-                    <h1>Results</h1>
+            <div class="col-md-8 jumbotron text center">
+                    <h1>Results:</h1>
                 @if (isset($details))
-                    <p> The Search result for your query <b> {{ $query }} </b> are: </p>
-                    <h1>Details:</h1>
+                <p> The search results for <b> {{ $query }} </b> are: </p>
                     <table>
                         <thead>
-                            <tr>
-                                <th>Name</th>
+    <!--search for user-->   <tr>
+                                <th>Name</th><br>
                                 <th>Email</th>
                             </tr>
                         </thead>
@@ -23,16 +22,35 @@
                                 <tr>
                                     <td> {{ $user->name }} </td>
                                     <td> {{ $user->email }} </td>
-                                </tr>
+                                </tr>                               
                             @endforeach
                             @elseif(isset( $message ))
-                                <p> {{ $message }} </p>
+                            <p> {{ $message }} </p>
+                        </tbody>
+                    </table>
+                @endif
+
+                @if (isset($details2))
+                    <table>
+                        <thead>
+    <!--search for Post-->  <tr>
+                                <th>Title</th><br>
+                                <th>Post</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($details2 as $post)
+                                <tr>
+                                    <td> {{ $post->title }} </td>
+                                    <td> {{ $post->body }} </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 @endif
             </div>
-            
-            <div class="col-md-3">
+          
+            <div class="col-md-2">
             </div>
         </div>
     </body>

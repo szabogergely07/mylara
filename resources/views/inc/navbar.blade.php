@@ -3,7 +3,8 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
 
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            <!--{{ config('app.name', 'Laravel') }}-->
+            <i class="fa fa-home" aria-hidden="true"></i>
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">

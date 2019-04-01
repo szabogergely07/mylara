@@ -11,22 +11,26 @@ use DB;
 
 class SearchController extends Controller
 {
-    public function search(){
+
+    public function usersearch(){
             $search_input = Input::get('search_input');
             $user = User::where('name', 'LIKE', '%' . $search_input . '%')
                             ->orWhere('email', 'LIKE', '%' . $search_input . '%')
+                            ->get();
+            $post = Post::where('title', 'LIKE', '%' . $search_input . '%')
+                            ->orWhere('body', 'LIKE', '%' . $search_input . '%')
                             ->get();
             if(empty($search_input)){
                 return view('search.result')->withMessage("Please type something into SEARCH-field");
             }
 
             elseif(count($user) < 1){
-                return view('search.result')->withMessage("No such a USER in our database");
+                return view('search.result')->withMessage("Nothing found");
             }
 
             else{
 
-                return view('search.result')->withDetails($user)->withQuery($search_input);
+                return view('search.result')->withDetails($user)->withDetails2($post)->withQuery($search_input);
             }  
     }
 }

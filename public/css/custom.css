@@ -1,3 +1,30 @@
 body{
     margin: 100px 0px 100px 0px;
 }
+/*large social media buttons zoomed and moved*/
+.btn-social-icon.btn-lg{
+    transition: 1s;
+    width: 200px;
+}
+.btn-social-icon.btn-lg:hover{
+    width: 300px; 
+}
+/*home button rotate, zoom and changes its color*/
+.fa-home{
+    transition: 2s;
+}
+.fa-home:hover{
+    -webkit-transform: rotate(360deg) scale(1.5);
+    transform: rotate(360deg) scale(2);
+    color: aqua;
+}
+/*navigation bar links zoom*/
+.nav-link:hover{
+    transform: scale(1.2);
+    font-weight: bold;
+}
+/*front page contact area style*/
+.contact{
+    width: 200px;
+    min-height: 300px;
+}

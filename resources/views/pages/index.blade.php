@@ -9,17 +9,22 @@
         <body> 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2">
-                    </div>
-                    
-                    <div class="col-md-7 jumbotron text center">
-                        <div class="btn-group mb-xl-5 float-right">
-                            <a class="btn btn-primary btn-lg" href="/mylara/public/login" role="button">Login</a>
-                            <a class="btn btn-success btn-lg" href="/mylara/public/register" role="button">Register</a>
+                    <div class="col-md-4">
+                        @include('inc.socialmedia')
+                        <div class="contact border border-primary rounded d-none d-md-block">
+                            <p>Contact</p>
+                            
                         </div>
                     </div>
-                    <div class="col-md-3">                    
-                        @include('inc.socialmedia')                    
+                    
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-2">                    
+                        <div class="mb-xl-5 float-right d-none d-lg-block">
+                            <a class="btn btn-primary btn-sm" href="/mylara/public/login" role="button">Login</a>
+                            <a class="btn btn-success btn-sm" href="/mylara/public/register" role="button">Register</a>
+                        </div>
+                            
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
-        <script src="{{ asset('public/vendor/unisharp/laravel-ckeditor/ckeditor.js') }}" defer></script>
+        <script src="{{ asset('js/custom.js') }}" defer></script>
 
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -22,6 +22,7 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-social.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
         
 
     </head>
@@ -35,9 +36,6 @@
         @yield('content')
         @yield('bodysection')
 
-        <script type="text/javascript">
-            CKEDITOR.replace( 'editor1' );
-        </script>
     </body>
     <footer class="">
         @include('inc.footer')

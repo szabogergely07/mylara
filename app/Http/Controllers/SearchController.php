@@ -23,14 +23,22 @@ class SearchController extends Controller
             if(empty($search_input)){
                 return view('search.result')->withMessage("Please type something into SEARCH-field");
             }
+            
+            elseif(count($post) < 1 && count($user) < 1){
+                return view('search.result')->withQuery($search_input)->withMessage3("Nothing found");
+            }
+
+            elseif(count($post) < 1){
+                return view('search.result')->withQuery($search_input)->withDetails($user)->withMessage2("No Post found");
+            }
 
             elseif(count($user) < 1){
-                return view('search.result')->withMessage("Nothing found");
+                return view('search.result')->withQuery($search_input)->withDetails2($post)->withMessage("No User found");
             }
 
             else{
 
-                return view('search.result')->withDetails($user)->withDetails2($post)->withQuery($search_input);
+                return view('search.result')->withQuery($search_input)->withDetails($user)->withDetails2($post);
             }  
     }
 }

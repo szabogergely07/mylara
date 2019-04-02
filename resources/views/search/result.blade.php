@@ -9,7 +9,7 @@
             <div class="col-md-8 jumbotron text center">
                     <h1>Results:</h1>
                 @if (isset($details))
-                <p> The search results for <b> {{ $query }} </b> are: </p>
+                <!--<p> The search results for <b> {{ $query }} </b> are: </p>-->
                     <table>
                         <thead>
     <!--search for user-->   <tr>
@@ -45,6 +45,10 @@
                                     <td> {{ $post->body }} </td>
                                 </tr>
                             @endforeach
+                            @elseif(isset( $message2 ))
+                            <p> {{ $message2 }} </p>
+                            @elseif(isset( $message3 ))
+                            <p> {{ $message3 }} </p>
                         </tbody>
                     </table>
                 @endif

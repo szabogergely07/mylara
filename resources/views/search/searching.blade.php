@@ -4,7 +4,7 @@
         {{ csrf_field() }}
         <div class="input-group">
             <input type="text" class="form-control" name="search_input" placeholder="Search something...">
-            <input class="btn btn-primary" type="submit">
+            <button type="submit" class="btn btn-light"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
         </form>
     </body>

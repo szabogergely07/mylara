@@ -2,8 +2,8 @@
 
 @section('content')
     <body>
-            <div class="well">
-                <div class="row">
+            <div class="container">
+                <div class="row well">
                         <div class="col-md-2 col-sm-2"><!--displays uploaded images...or noimage.jpg-->
                         </div>
 

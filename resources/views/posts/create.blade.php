@@ -1,14 +1,15 @@
 @extends('layouts.app')
 
-@section('content')<!--to get form, need to install laravie html\form pack-->
+@section('content')
 <body>
+<div class="container">
         <div class="row">
                 <div class="col-md-2 col-sm-2">
                 </div>
                 <div class="col-md-8 col-sm-8">
-                        <h1>Create Post</h1><!--see below: whenever subit a file, need to have an enctype attribute in form-->
+                        <h1>Create Post</h1><!--see below: whenever submit a file, need to have an enctype attribute in form-->
                         {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
-                        <div class="form-group"><!--bootstrap form calss-->
+                        <div class="form-group">
                                 {{Form::label('title', 'Title')}}<!--label required in postscontroll-->
                                 {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
                         </div><!--here is a text field displayed-->
@@ -27,5 +28,6 @@
                 <div class="col-md-2 col-sm-2">      
                 </div>
         </div>
+</div>
 </body>
 @endsection

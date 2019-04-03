@@ -24,7 +24,35 @@ body{
     font-weight: bold;
 }
 /*front page contact area style*/
-.contact{
+.contact {
+    position: relative;
     width: 200px;
-    min-height: 300px;
+}
+.contactimg {
+    display: block;
+    width: 100%;
+    height: auto;
+} 
+.contactdetails {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: aqua;
+}
+.contact:hover .contactdetails {
+    opacity: 1;
+}
+.cont_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }

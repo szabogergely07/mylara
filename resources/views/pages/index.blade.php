@@ -12,8 +12,17 @@
                     <div class="col-md-4">
                         @include('inc.socialmedia')
                         <div class="contact border border-primary rounded d-none d-md-block">
-                            <p>Contact</p>
-                            
+                            <img src={{ asset('images/contact.jpg') }} class="contactimg img-fluid" alt="Responsive image">
+                            <div class="contactdetails">
+                                <div class="cont_text">
+                                    <h3><i class="fa fa-envelope" aria-hidden="true"></i></h3>
+                                    <p>agyarmati123@gmail.com</p>
+                                    <h3><i class="fa fa-phone" aria-hidden="true"></i></h3>
+                                    <p>(+43)0 664 3855768</p>
+                                    <h3><i class="fa fa-map-marker" aria-hidden="true"></i></h3>
+                                    <p>1180 Wien<br>Pötzleinsdorfer<br>Straße 194</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     

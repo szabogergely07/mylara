@@ -6,7 +6,9 @@
         </head>
     @endsection
     @section('bodysection')
-        <body> 
+        <body>
+            
+            <div id="load_screen"><div id="loading">loading document</div></div> 
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">

@@ -15,9 +15,7 @@
                     {{$post->body}}
                 </div>
                 <div class="post_details">
-                    <hr>
-                        <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
-                    <hr>
+                    <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
                 </div>
             </div>
 

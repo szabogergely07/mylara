@@ -24,3 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/myprojects', 'PagesController@myprojects');
 
 Route::post('/result', 'SearchController@usersearch');
+
+Route::get('/contact', 'PagesController@contact');

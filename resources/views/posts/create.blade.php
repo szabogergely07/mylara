@@ -4,9 +4,10 @@
 <body>
 <div class="container">
         <div class="row">
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-4">
+                        @include('inc.socialmedia')
                 </div>
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-7">
                         <h1>Create Post</h1><!--see below: whenever submit a file, need to have an enctype attribute in form-->
                                 {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                         <div class="form-group">
@@ -25,7 +26,7 @@
                                 {!! Form::close() !!}
                         </div>  
                 </div>
-                <div class="col-md-2 col-sm-2">      
+                <div class="col-md-1">      
                 </div>
         </div>
 </div>

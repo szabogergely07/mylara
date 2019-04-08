@@ -3,11 +3,12 @@
 @section('content')
     <body>
             <div class="container">
-                <div class="row well">
-                        <div class="col-md-2 col-sm-2"><!--displays uploaded images...or noimage.jpg-->
+                <div class="row">
+                        <div class="col-md-4"><!--displays uploaded images...or noimage.jpg-->
+                            @include('inc.socialmedia')
                         </div>
 
-                        <div class="col-md-8 col-sm-8">                           
+                        <div class="col-md-7">                           
                                 <h1 id="post_title">Posts</h1>
                             @if (count($posts) > 0)
                                 @foreach ($posts as $post)
@@ -27,7 +28,7 @@
                             @endif
                         </div>                   
 
-                        <div class="col-md-2 col-sm-2">
+                        <div class="col-md-1">
                         </div>                       
                 </div>
             </div>

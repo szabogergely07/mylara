@@ -19,6 +19,7 @@
                         @include('inc.socialmedia')
                     </div>
                     <div class="col-md-6">
+                        <h2>Welcome here!</h2>
                     </div>
                     <div class="col-md-2">                    
                         <div class="mb-xl-5 float-right d-none d-lg-block">

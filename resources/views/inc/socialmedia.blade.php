@@ -17,9 +17,9 @@
             </a>
         </div>
         <div title="Stack Overflow" class="social_media_buttons">
-                <a href="https://stackoverflow.com/users/11037329/agyarmati?tab=profile" style="color: #f48024; background-color: #f2f2f2" class="btn btn-lg btn-social-icon">
-                    <i class="fab fa-stack-overflow"></i>
-                </a>
+            <a href="https://stackoverflow.com/users/11037329/agyarmati?tab=profile" style="color: #f48024; background-color: #f2f2f2" class="btn btn-lg btn-social-icon">
+                <i class="fab fa-stack-overflow"></i>
+            </a>
         </div>
     </div>
     <div class="contact border border-dark rounded d-none d-md-block">

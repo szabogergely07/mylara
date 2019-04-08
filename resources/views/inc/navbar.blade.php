@@ -25,6 +25,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/mylara/public/posts/create">Write Post <span class="sr-only">(current)</span></a>
             </li>
+            <li class="hidden nav-item active">
+                <a class="nav-link" href="/mylara/public/contact">Contact <span class="sr-only">(current)</span></a>
+            </li>
           </ul>
 
 <!-- Right Side Of Navbar -->

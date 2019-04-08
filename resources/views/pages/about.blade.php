@@ -5,7 +5,8 @@
         <body>
         <div class="container">
                 <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-4">
+                                @include('inc.socialmedia')
                         </div>
                         <div class="col-md-7">
                                 <h1>About <small>me</small></h1>
@@ -31,7 +32,7 @@
                                                 Let’s do it then!</p>
                                 </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-1">
                                 
                         </div>
                 </div>

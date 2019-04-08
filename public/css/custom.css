@@ -16,6 +16,22 @@ h1{
   margin-bottom: 20px;
 }
 
+/*hidden elements only display on small screen*/
+.hidden{
+  visibility: hidden;
+}
+
+/*contact page style*/
+.contact{
+  text-align: center;
+  margin: auto;
+}
+
+/*Login page style*/
+.card{
+  border: 2px black solid;
+}
+
 /*Post page edit button*/
 .btn-info{
   margin-right: 15px;
@@ -131,7 +147,7 @@ h1{
       border: 1px solid black;
   }
   .btn-social-icon.btn-lg:hover{
-      width: 300px; 
+      width: 240px; 
   }
 
 /*home button rotate, zoom and changes its color*/
@@ -236,6 +252,7 @@ h1{
 @media screen  and (max-width: 979px) {
 
 
+
 /*large social media buttons zoomed and moved*/
   .social_group{
     position: fixed;
@@ -246,7 +263,7 @@ h1{
       border: 1px solid black;
   }
   .btn-social-icon.btn-lg:hover{
-      width: 300px; 
+      width: 200px; 
   }
 
 /*front page contact area style*/
@@ -340,5 +357,8 @@ h1{
   #post_index{
     margin: 10px;
   }
-
+  /*hidden elements only display on small screen*/
+  .hidden{
+    visibility: visible;
+  }
 }

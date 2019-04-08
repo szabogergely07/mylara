@@ -2,18 +2,19 @@
 
  @section('content')
     <body>
+        <div class="container">
         <div class="row">
             <div class="col-md-2">
             </div>
         
-            <div class="col-md-8 jumbotron text center">
+            <div id="result" class="col-md-8">
                     <h1>Results:</h1>
                 @if (isset($details))
                 <!--<p> The search results for <b> {{ $query }} </b> are: </p>-->
                     <table>
                         <thead>
-    <!--search for user-->   <tr>
-                                <th>Name</th><br>
+    <!--search for user-->  <tr>
+                                <th>Name</th>
                                 <th>Email</th>
                             </tr>
                         </thead>
@@ -57,5 +58,6 @@
             <div class="col-md-2">
             </div>
         </div>
+    </div>
     </body>
 @endsection

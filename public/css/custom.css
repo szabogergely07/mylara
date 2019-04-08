@@ -13,14 +13,48 @@ body{
 h1{
   font-weight: bold;
   text-shadow: -3px -2px 1px red;
+  margin-bottom: 20px;
 }
 
+/*Post page edit button*/
 .btn-info{
   margin-right: 15px;
 }
-
+/*post pages style*/
+#post_title{
+  border-bottom: 1px red solid;
+  padding-bottom: 20px;
+}
+#post_index{
+  margin-bottom: 20px;
+  border-bottom: 1px red solid;
+  position: relative;
+  padding-bottom: 20px;
+}
 .post_details{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
 
+.form-control{
+  border: 1px red solid;
+}
+
+/*Search result page style*/
+#result th{
+  padding: 30px;
+  font-size: 18px;
+}
+#result td{
+  padding: 20px 30px 20px 20px;
+}
+#result tr{
+  border-bottom: 1px red solid;
+}
+#result p{
+  font-weight: bold;
+  text-align: center;
 }
 
 /*loading screen before index page*/
@@ -302,6 +336,9 @@ h1{
   
   .about_text{
     font-size: 14px;
+  }
+  #post_index{
+    margin: 10px;
   }
 
 }

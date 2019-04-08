@@ -12,15 +12,19 @@
                             @if (count($posts) > 0)
                                 @foreach ($posts as $post)
                                     <h3><a href="/mylara/public/posts/{{$post->id}}">{{$post->title}}</a></h3>
+                                <div class="post_details">
                                     <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
+                                </div>
                                 @endforeach
                                     {{$posts->links()}}
                                 @else
                                     <p>No posts found</p>
                             @endif
-                                <img style="width:30%" src="/mylara/public/storage/cover_images/{{$post->cover_image}}" alt="">
-                        </div><!--add time and ->name from user, under the post-->                     
-                        
+                                <div>
+                                    <img style="width:10%; height:10%" src="/mylara/public/storage/cover_images/{{$post->cover_image}}" alt="">
+                                </div>
+                        </div>                   
+
                         <div class="col-md-2 col-sm-2">
                         </div>                       
                 </div>

@@ -1,96 +1,44 @@
 body{
-    margin: 100px 0px 100px 0px;
-    background-color: white;/*for browsers which not supporting*/
-    background-image: linear-gradient(to right, rgb(171, 172, 173), white, white,rgb(171, 172, 173));
+  margin: 100px 0px 100px 0px;
+  background-color: white;/*for browsers do not support linear-gradient*/
+  background-image: linear-gradient(to right, rgb(171, 172, 173), white, white,rgb(171, 172, 173));
 }
+
 .col-md-8,
 .col-md-7,
 .col-md-6{
   padding: 40px 5px 30px 5px;
 }
 
+h1{
+  font-weight: bold;
+  text-shadow: -3px -2px 1px red;
+}
 
-/* Desktop sized screen style from here*/
-@media screen and (min-width: 980px)  {
+.btn-info{
+  margin-right: 15px;
+}
 
-/*large social media buttons zoomed and moved*/
-.social_group{
-  position: fixed;
+.post_details{
+
 }
-.btn-social-icon.btn-lg{
-    transition: 1s;
-    width: 200px;
-    border: 1px solid black;
-}
-.btn-social-icon.btn-lg:hover{
-    width: 300px; 
-}
-/*home button rotate, zoom and changes its color*/
-.fa-home{
-    transition: 0.5s;
-    color: red;
-}
-.fa-home:hover{
-    -webkit-transform: rotate(360deg) scale(1.5);
-    transform: rotate(360deg) scale(2);
-    color: green;
-}
-/*navigation bar links zoom*/
-.nav-link:hover{
-    transform: scale(1.2);
-    font-weight: bold;
-}
-/*front page contact area style*/
-.contact {
-    position: relative;
-    width: 200px;
-}
-.contactimg {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 1px solid black;
-} 
-.contactdetails {
-    position: absolute;
-    text-align: center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color:white;
-}
-.contact:hover .contactdetails {
-    opacity: 1;
-}
-.cont_text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
+
 /*loading screen before index page*/
 #load_screen{
-    opacity: 1;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    z-index: 100;
-    width: 100%;
-    height: 100%;
+  opacity: 1;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
 }
 .lds-ring {
-  
   display: inline-block;
   position: relative;
   width: 64px;
   height: 64px;
-}
+  }
 .lds-ring div {
   box-sizing: border-box;
   display: block;
@@ -102,252 +50,258 @@ body{
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color:black transparent transparent transparent;
-}
+  }
 .lds-ring div:nth-child(1) {
   animation-delay: -0.45s;
-}
+  }
 .lds-ring div:nth-child(2) {
   animation-delay: -0.3s;
-}
+  }
 .lds-ring div:nth-child(3) {
   animation-delay: -0.15s;
 }
 @keyframes lds-ring {
   0% {
-    transform: rotate(0deg);
+  transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+  transform: rotate(360deg);
   }
 }
+
+/*About me page style*/
+.about_img{
+  border: 1px black solid;
+  margin-bottom: 20px;
+}
+.about_text{
+  margin: 8px;
+}
+
+
+/*////////////////////////////////RESPONSIVE DESIGN STARTS FROM HERE///////////////////////////////////////////////////*/
+
+
+
+/* Desktop sized screen style from here*/
+@media screen and (min-width: 980px)  {
+
+
+/*large social media buttons zoomed and moved*/
+  .social_group{
+    position: fixed;
+  }
+  .btn-social-icon.btn-lg{
+      transition: 1s;
+      width: 200px;
+      border: 1px solid black;
+  }
+  .btn-social-icon.btn-lg:hover{
+      width: 300px; 
+  }
+
+/*home button rotate, zoom and changes its color*/
+  .fa-home{
+      transition: 0.5s;
+      color: red;
+  }
+  .fa-home:hover{
+      -webkit-transform: rotate(360deg) scale(1.5);
+      transform: rotate(360deg) scale(2);
+      color: green;
+  }
+
+/*navigation bar links zoom*/
+  .nav-link:hover{
+      transform: scale(1.2);
+      font-weight: bold;
+  }
+
+/*front page contact area style*/
+  .contact {
+      position: relative;
+      width: 200px;
+  }
+  .contactimg {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid black;
+  } 
+  .contactdetails {
+      position: absolute;
+      text-align: center;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color:white;
+  }
+  .contact:hover .contactdetails {
+      opacity: 1;
+  }
+  .cont_text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+  }
+
 /*My projects inhalt*/
-.project_embed{
-  position: relative;
-  width: 70%;
-  margin: auto;
-}
-.projectimg{
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  margin-top: 15%;
-}
-.project_embed:hover .project_description{
-  opacity: 0.8;
-}
-.project_description{
-  position: absolute;
-  text-align: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color:rgb(126, 214, 241);
-  border-radius: 15px;
-}
-.project_text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
+  .project_embed{
+    position: relative;
+    width: 70%;
+    margin: auto;
+  }
+  .projectimg{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 15%;
+  }
+  .project_embed:hover .project_description{
+    opacity: 0.8;
+  }
+  .project_description{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:rgb(126, 214, 241);
+    border-radius: 15px;
+  }
+  .project_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+/*About me page style*/
+  .about_text{
+    font-size: 18px;
+  }
 }
 
 
 
 /* Tablet sized screen style */ 
-
-
 @media screen  and (max-width: 979px) {
 
+
 /*large social media buttons zoomed and moved*/
-.social_group{
-  position: fixed;
-}
-.btn-social-icon.btn-lg{
-    transition: 1s;
-    width: 200px;
-    border: 1px solid black;
-}
-.btn-social-icon.btn-lg:hover{
-    width: 300px; 
-}
+  .social_group{
+    position: fixed;
+  }
+  .btn-social-icon.btn-lg{
+      transition: 1s;
+      width: 200px;
+      border: 1px solid black;
+  }
+  .btn-social-icon.btn-lg:hover{
+      width: 300px; 
+  }
 
 /*front page contact area style*/
-.contact {
-  position: relative;
-  width: 200px;
-}
-.contactimg {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid black;
-} 
-.contactdetails {
-  position: absolute;
-  text-align: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color:white;
-}
-.contact:hover .contactdetails {
-  opacity: 1;
-}
-.cont_text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-}
-/*loading screen before index page*/
-#load_screen{
-  opacity: 1;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-}
-.lds-ring {
+  .contact {
+    position: relative;
+    width: 200px;
+  }
+  .contactimg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+  } 
+  .contactdetails {
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:white;
+  }
+  .contact:hover .contactdetails {
+    opacity: 1;
+  }
+  .cont_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
 
-display: inline-block;
-position: relative;
-width: 64px;
-height: 64px;
-}
-.lds-ring div {
-box-sizing: border-box;
-display: block;
-position: absolute;
-width: 51px;
-height: 51px;
-margin: 6px;
-border: 6px solid black;
-border-radius: 50%;
-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-border-color:black transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-0% {
-  transform: rotate(0deg);
-}
-100% {
-  transform: rotate(360deg);
-}
-}
 /*My projects inhalt*/
-.project_embed{
-position: relative;
-width: 70%;
-margin: auto;
-}
-.projectimg{
-display: block;
-width: 100%;
-height: auto;
-border-radius: 15px;
-margin-top: 15%;
-}
-.project_embed:hover .project_description{
-opacity: 0.8;
-}
-.project_description{
-position: absolute;
-text-align: center;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-height: 100%;
-width: 100%;
-opacity: 0;
-transition: .5s ease;
-background-color:rgb(126, 214, 241);
-border-radius: 15px;
-}
-.project_text{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%);
-}
+  .project_embed{
+    position: relative;
+    width: 70%;
+    margin: auto;
+  }
+  .projectimg{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 15%;
+  }
+  .project_embed:hover .project_description{
+    opacity: 0.8;
+  }
+  .project_description{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:rgb(126, 214, 241);
+    border-radius: 15px;
+  }
+  .project_text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+/*About me page style*/
+  .about_text{
+    font-size: 18px;
+  }
 }
 
 
 
 /* Mobile */
 @media screen and (max-width: 500px)  {
+  
+  
+  .about_text{
+    font-size: 14px;
+  }
 
-
-/*loading screen before index page*/
-#load_screen{
-  opacity: 1;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-}
-.lds-ring {
-
-display: inline-block;
-position: relative;
-width: 64px;
-height: 64px;
-}
-.lds-ring div {
-box-sizing: border-box;
-display: block;
-position: absolute;
-width: 51px;
-height: 51px;
-margin: 6px;
-border: 6px solid black;
-border-radius: 50%;
-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-border-color:black transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-0% {
-  transform: rotate(0deg);
-}
-100% {
-  transform: rotate(360deg);
-}
-}
 }

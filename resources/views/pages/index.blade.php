@@ -18,11 +18,13 @@
                     <div class="col-md-4">
                         @include('inc.socialmedia')
                     </div>
-                    <div class="col-md-6">
-                        <h2>Welcome here!</h2>
+                    <div class="col-md-4">
                         <div id="welcome_id"></div>
+                        <div id="welcome_add">
+                        <h3>TO MY WEBSITE</h3>
+                        </div>
                     </div>
-                    <div class="col-md-2">                    
+                    <div class="col-md-4">                    
                         <div class="mb-xl-5 float-right d-none d-lg-block">
                             <a class="btn btn-primary btn-sm" href="/mylara/public/login" role="button">Login</a>
                             <a class="btn btn-success btn-sm" href="/mylara/public/register" role="button">Register</a>

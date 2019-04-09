@@ -17,25 +17,26 @@ h1{
 }
 
 /*Welcome page animation style*//* by Yun Liu : https://codepen.io/njuliuyun/ */
+#welcome_add{
+  text-align: center;
+  position: relative;
+}
 #welcome_id {
   width: 100%;
   height: 100%;
-  margin: auto;
   position: relative;
-  overflow: hidden;
 }
-
 .ball {
-  background-color: pink;
-  color: rgb(233,65,103);
+  color: #343a40;
   border-radius: 50%;
   position: absolute;
   text-align: center;
   font-family: new times roman, serif;
+  font-weight: bold;
 }
 .skin {
   position: absolute;
-  background-color: rgb(233,65,103);
+  background-color: #343a40;
   border-radius: 50%;    
 }
 

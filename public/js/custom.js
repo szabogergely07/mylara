@@ -15,11 +15,11 @@ window.onload = function() {
     var lifespan2 = 150;
     var ground = .3 * cH;
     var startX;
-    var r = 38;
+    var r = 48;
     var speedX;
     var speedYDown = 3;
     var speedYUp = 15;
-    var fontSize = 32;    
+    var fontSize = 33;    
     if (cW > 500) {
         startX = 0.25 * cW;
         speedX = 0.005 * cW;
@@ -34,7 +34,7 @@ window.onload = function() {
         this.sLetter = sLetter;
         this.node;
         this.x = startX;
-        this.y = ground - 50;
+        this.y = ground - 100;
         this.index = index;
         this.r = r;
         this.jumpN = 0;
@@ -124,5 +124,4 @@ window.onload = function() {
     
     var tb = new TextBalls("WELCOME");
     tb.move();
-    
 }

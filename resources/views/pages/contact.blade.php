@@ -9,7 +9,7 @@
                                     @include('inc.socialmedia')
                                 </div>
                                 <div class="col-md-8">
-                                    <div class="contact">
+                                    <div class="contact_page">
                                         <h3><i class="fa fa-envelope" aria-hidden="true"></i></h3>
                                         <p>agyarmati123@gmail.com</p>
                                         <h3><i class="fa fa-mobile" aria-hidden="true"></i></h3>

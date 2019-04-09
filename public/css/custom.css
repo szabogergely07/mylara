@@ -16,13 +16,36 @@ h1{
   margin-bottom: 20px;
 }
 
+/*Welcome page animation style*//* by Yun Liu : https://codepen.io/njuliuyun/ */
+#welcome_id {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.ball {
+  background-color: pink;
+  color: rgb(233,65,103);
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  font-family: new times roman, serif;
+}
+.skin {
+  position: absolute;
+  background-color: rgb(233,65,103);
+  border-radius: 50%;    
+}
+
 /*hidden elements only display on small screen*/
 .hidden{
   visibility: hidden;
 }
 
 /*contact page style*/
-.contact{
+.contact_page{
   text-align: center;
   margin: auto;
 }
@@ -357,7 +380,7 @@ h1{
   #post_index{
     margin: 10px;
   }
-  /*hidden elements only display on small screen*/
+/*hidden elements only display on small screen*/
   .hidden{
     visibility: visible;
   }

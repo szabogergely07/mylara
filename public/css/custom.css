@@ -518,8 +518,9 @@ h1{
     font-weight: bolder;
     font-size: 12px;
     padding-top: 2px;
-    margin: auto;
-    margin-bottom: 10px;
+    margin-right: 30px;
+    margin-left: 15px;
+    margin-bottom: 20px;
     opacity: 0.9;
   }
   #w1{
@@ -527,8 +528,8 @@ h1{
     float: left;
     background:blue;
     border-radius: .4em;
-    height: 60px;
-    width: 120px;
+    height: 50px;
+    width: 100px;
 
   }
   #w1::after {
@@ -548,12 +549,12 @@ h1{
 
   #w2{
     position: relative;
-    float: left;
-    left: 10px;
+    float: right;
+    left: -20px;
     background: #830fa7;
     border-radius: .4em;
-    height: 60px;
-    width: 130px;
+    height: 50px;
+    width: 100px;
 
   }
   #w2::after{
@@ -573,12 +574,12 @@ h1{
 
   #w3{
     position: relative;
-    float: left;
+    float: right;
     right: 30px;
     background: #0eda1f;
     border-radius: .4em;
-    height: 30px;
-    width: 170px;
+    height: 20px;
+    width: 120px;
 
   }
   #w3::after{
@@ -588,12 +589,12 @@ h1{
     top: 50%;
     width: 0;
     height: 0;
-    border: 16px solid transparent;
+    border: 12px solid transparent;
     border-left-color: #0eda1f;
     border-right: 0;
     border-bottom: 0;
-    margin-top: -8px;
-    margin-right: -16px;
+    margin-top: -6px;
+    margin-right: -12px;
   }
 
   #w4{
@@ -602,8 +603,8 @@ h1{
     left: 10px;
     background: #ebb608;
     border-radius: .4em;
-    height: 50px;
-    width: 130px;
+    height: 35px;
+    width: 100px;
 
   }
   #w4::after{
@@ -613,21 +614,21 @@ h1{
     top: 50%;
     width: 0;
     height: 0;
-    border: 30px solid transparent;
+    border: 20px solid transparent;
     border-right-color: #ebb608;
     border-left: 0;
     border-bottom: 0;
-    margin-top: -15px;
-    margin-left: -30px;
+    margin-top: -10px;
+    margin-left: -20px;
   }
 
   #w5{
     position: relative;
-    float: left;
+    float: right;
     background: #bd3c26;
     border-radius: .4em;
-    height: 70px;
-    width: 130px;
+    height: 50px;
+    width: 100px;
 
   }
   #w5::after{

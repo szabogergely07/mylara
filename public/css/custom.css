@@ -4,17 +4,25 @@ body{
   background-image: linear-gradient(to right, rgb(171, 172, 173), white, white,rgb(171, 172, 173));
 }
 
-.col-md-8,
-.col-md-7,
-.col-md-6{
-  padding: 40px 5px 30px 5px;
-}
+
 
 h1{
   font-weight: bold;
   text-shadow: -3px -2px 1px red;
   margin-bottom: 20px;
 }
+
+#footer:hover{
+  background-color: darkgray;
+  padding-top: 4px;
+}
+
+/*login-register buttons*/
+.logbtn{
+  position: fixed;
+  right: 10%;
+}
+
 /*welcome page style*/
 .wel_el{
   margin-top: 60px;
@@ -493,7 +501,30 @@ h1{
 /* Mobile */
 @media screen and (max-width: 500px)  {
   
-  
+
+  .col-md-8,
+  .col-md-7,
+  .col-md-6{
+    padding: 40px 5px 30px 5px;
+  }
+
+  p {
+    font-size: 11px;
+  }
+
+  h1{
+    font-size: 13px;
+  }
+
+  h2 {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .post_details small{
+    font-size: 7px;
+  }
+
   .about_text{
     font-size: 14px;
   }
@@ -501,6 +532,12 @@ h1{
   #post_index{
     margin: 10px;
   }
+
+/*footer style*/
+#footer{
+  background-color: darkgray;
+  padding-top: 4px;
+}
 
 /*hidden elements only display on small screen*/
   .hidden{

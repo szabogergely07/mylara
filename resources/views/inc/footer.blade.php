@@ -1,4 +1,4 @@
-<footer class="footer-copyright text-center fixed-bottom"><!--footer added to all pages-->
+<footer id="footer" class="footer-copyright text-center fixed-bottom"><!--footer added to all pages-->
     <p>
         <a href="https://www.facebook.com/adam.gy.37" class="btn btn-sm btn-social-icon btn-facebook">
                     <span class="fab fa-facebook"></span>

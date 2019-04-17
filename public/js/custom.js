@@ -4,6 +4,17 @@ window.addEventListener("load", function() {
     document.body.removeChild(load_screen);
 });
 
+/*footer hide on scroll*/
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("footer").style.visibility = "hidden";
+  } else {
+    document.getElementById("footer").style.visibility = "visible";
+  }
+}
+
 /*Welcome page scripts*/
 /*function createLine(x1, y1, x2, y2, lineID){
     

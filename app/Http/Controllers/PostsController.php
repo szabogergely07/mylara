@@ -52,7 +52,6 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
@@ -134,7 +133,9 @@ class PostsController extends Controller
             'body' => 'required'
         ]);
 
-         //Handle File Upload
+         //Handle File Upload: this is a code duplication,
+//you could pack it in a private function storeFile() and call it where u need.
+//(Or use Laravel storage system)
          if($request->hasFile('cover_image')){
             //Get filename with the extension
             $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
